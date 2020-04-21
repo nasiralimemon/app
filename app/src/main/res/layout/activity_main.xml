@@ -1,95 +1,107 @@
-<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:tools="http://schemas.android.com/tools"
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
 	android:id="@+id/pullfresh"
 	android:layout_width="match_parent"
-	android:layout_height="wrap_content"
-	xmlns:android="http://schemas.android.com/apk/res/android">
-<RelativeLayout
-	android:layout_width="match_parent"
-    android:layout_height="match_parent"
-	android:paddingLeft="0dip"
-    android:paddingRight="0dip"
-    android:paddingTop="0dip"
-    android:paddingBottom="0dip"
-	tools:context="MainActivity"
-    android:background="@color/colorPrimary">
-    <RelativeLayout
-        android:id="@+id/msw_welcome"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="visible"
-        android:gravity="center_vertical|center_horizontal|center"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        tools:ignore="RtlHardcoded">
-        <ImageView
-            android:id="@+id/msw_logo"
-            android:layout_width="275dip"
-            android:layout_height="100dip"
-            android:src="@raw/front_splash"
-            android:gravity="center_vertical|center_horizontal|center"
-            android:contentDescription="@string/image_view"
-            android:layout_gravity="top"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true" />
+	android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/msw_loading_text"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical|center_horizontal|center"
-            android:layout_width="match_parent"
-            tools:ignore="NotSibling"
-            android:text="@string/app_name"
-            android:textSize="18sp"
-            android:textStyle="normal|bold"
-            android:textColor="?android:attr/textColorTertiary"
-            android:layout_marginTop="26dp"
-            android:layout_below="@+id/msw_logo"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@drawable/gradiant"
+		android:paddingLeft="0dip"
+		android:paddingTop="0dip"
+		android:paddingRight="0dip"
+		android:paddingBottom="0dip"
+		tools:context="MainActivity">
 
-        <TextView
-			android:layout_height="wrap_content"
-            android:gravity="center_vertical|center_horizontal|center"
-            android:layout_width="match_parent"
-            tools:ignore="NotSibling"
-            android:text="@string/mgks_promo"
-            android:textSize="18sp"
-            android:textStyle="normal|bold"
-            android:textColor="?android:attr/textColorTertiary"
-            android:layout_below="@+id/msw_loading_text"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="120dp" />
-    </RelativeLayout>
-    <WebView
-        android:id="@+id/msw_view"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:visibility="gone" />
-	<WebView
-		android:id="@+id/print_view"
-		android:layout_width="0dp"
-		android:layout_height="0dp"
-		android:visibility="gone" />
-	<com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
-		android:id="@+id/msw_ad_view"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_gravity="bottom|center"
-		android:layout_alignParentBottom="true"
-		android:layout_centerHorizontal="true"
-		ads:adSize="BANNER"
-		ads:adUnitId="ca-app-pub-3940256099942544/6300978111"> <!-- this is just a test ad unit ID, replace it with your real ID right before publishing or your account can be suspended -->
-	</com.google.android.gms.ads.AdView>
-    <ProgressBar
-        android:id="@+id/msw_progress"
-        style="@android:style/Widget.ProgressBar.Horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="3dip"
-        android:progressDrawable="@drawable/progress_style"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:visibility="visible" />
-</RelativeLayout>
+
+		<RelativeLayout
+			android:id="@+id/msw_welcome"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_alignParentStart="true"
+			android:layout_alignParentLeft="true"
+			android:layout_alignParentTop="true"
+			android:layout_marginStart="7dp"
+			android:layout_marginLeft="7dp"
+			android:layout_marginTop="-160dp"
+			android:gravity="center_vertical|center_horizontal|center"
+			android:visibility="visible"
+			tools:ignore="RtlHardcoded">
+
+			<ImageView
+				android:id="@+id/msw_logo"
+				android:layout_width="295dp"
+				android:layout_height="243dp"
+				android:layout_gravity="top"
+				android:visibility="gone"
+				android:contentDescription="@string/image_view"
+
+				android:src="@raw/front_splash" />
+
+			<TextView
+				android:id="@+id/msw_loading_text"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/msw_logo"
+				android:layout_alignParentStart="true"
+				android:layout_alignParentLeft="true"
+				android:layout_marginTop="26dp"
+				android:gravity="center_vertical|center_horizontal|center"
+				android:text="@string/app_name"
+				android:textColor="?android:attr/textColorTertiary"
+				android:textSize="20sp"
+				android:textStyle="normal|bold"
+				android:visibility="gone"
+				tools:ignore="NotSibling" />
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/msw_loading_text"
+				android:layout_alignParentStart="true"
+				android:layout_alignParentLeft="true"
+				android:layout_marginTop="120dp"
+				android:gravity="center_vertical|center_horizontal|center"
+				android:text="@string/mgks_promo"
+				android:textColor="?android:attr/textColorTertiary"
+				android:textSize="18sp"
+				android:textStyle="normal|bold"
+				android:visibility="gone"
+				tools:ignore="NotSibling" />
+		</RelativeLayout>
+
+		<WebView
+			android:id="@+id/msw_view"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:visibility="gone" />
+
+		<WebView
+			android:id="@+id/print_view"
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			android:visibility="gone" />
+
+		<ProgressBar
+			android:id="@+id/msw_progress"
+			style="@android:style/Widget.ProgressBar.Horizontal"
+			android:layout_width="fill_parent"
+			android:layout_height="3dip"
+			android:layout_alignParentStart="true"
+			android:layout_alignParentBottom="true"
+			android:progressDrawable="@drawable/progress_style"
+			android:visibility="visible" />
+
+		<ImageView
+			android:id="@+id/imageView"
+			android:layout_width="46dp"
+			android:layout_height="46dp"
+			android:layout_centerHorizontal="true"
+			android:layout_centerVertical="true"
+			android:layout_margin="10dp"
+			android:visibility="gone">
+
+		</ImageView>
+	</RelativeLayout>
 </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

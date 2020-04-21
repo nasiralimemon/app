@@ -27,7 +27,7 @@
 		android:layout_alignParentTop="true"
 		android:background="@color/colorPrimary"
 		android:gravity="center_vertical|center_horizontal|center"
-		android:visibility="visible"
+		android:visibility="gone"
 		tools:ignore="RtlHardcoded">
 
 		<ImageView
